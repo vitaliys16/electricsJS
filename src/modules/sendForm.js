@@ -9,7 +9,7 @@ const sendForm = (formName) => {
             throw new Error ('Вставьте пожалуйста форму!');
         }
         form.addEventListener('submit', (event) => {
-            event.preventDefault();
+            event.preventDefault();  
         });
     } catch (error) {
         console.log(error.message);

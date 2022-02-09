@@ -6,6 +6,9 @@ const modal = () => {
     const modalCLoseBtn = document.querySelector('.modal-close');
     const modalServiesBtn = document.querySelector('.button-services');
 
+    //Модульное окно при нажатии на кнопку карточек из раздела "НАШИ УСЛУГИ"
+    const elementService = document.querySelectorAll('.services-carousel > div > .element');
+
     callbackBtn.forEach((btn) => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -23,6 +26,20 @@ const modal = () => {
 
         document.querySelector('.mobile-menu').style.right = "";
     });
+
+    elementService.forEach((item) => {
+
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if (e.target.classList.contains('img-wrapper')) {  
+                modalCallback.style.display = "block";
+                modalOverlay.style.display = "block";  
+            }  
+        });
+    });
+
+    
 
 
     modalCLoseBtn.addEventListener('click', (e) => {
