@@ -12,5 +12,11 @@ scrollUp();
 modal();
 menu();
 validation();
-sendForm('[name="form-callback"]');
+sendForm({ 
+    formName: '[name="form-callback"]',
+    someElem: [
+        {
+            type: "block",
+        }
+    ] });
 faq();
