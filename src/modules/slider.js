@@ -4,7 +4,7 @@ const slider = () => {
     const sliderBlock = document.querySelector('.top-slider');
     const slides = document.querySelectorAll('.item');
     const slidesContent = document.querySelectorAll('.table');
-    const timeInterval = 5000;
+    const timeInterval = 3000;
 
     let currentSlide = 0;
     let interval = null;
