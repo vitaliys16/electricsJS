@@ -1,8 +1,6 @@
 const sendForm = ({ formName , someElem= []}) => {
     const form = document.querySelector(formName);
 
-    console.log(form);
-
     const statusBlock = document.createElement('div');
     const loadText = 'Загрузка ...';
     const errorText = 'Ошибка ...';
@@ -30,7 +28,6 @@ const sendForm = ({ formName , someElem= []}) => {
 
 
     const validate = (list) => {
-        console.log('valVal');
         let success = true;
 
         list.forEach((item) => {

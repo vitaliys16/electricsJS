@@ -6,7 +6,7 @@ import menu from './modules/menu';
 import validation from './modules/validation';
 import sendForm from './modules/sendForm';
 import faq from './modules/faq';
-
+import slider from './modules/slider';
 
 scrollUp();
 modal();
@@ -20,3 +20,4 @@ sendForm({
         }
     ] });
 faq();
+slider();
