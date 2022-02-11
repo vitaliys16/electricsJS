@@ -112,6 +112,9 @@ const sendForm = ({ formName , someElem= []}) => {
             const modal = document.querySelector('.modal-callback');
             const modalOverlay = document.querySelector('.modal-overlay');
             setTimeout(() => {
+                    if (statusBlock.textContent == errorText) {
+                        return;
+                    }
                     modal.style.display = 'none';
                     modalOverlay.style.display = 'none';
             }, 5000);

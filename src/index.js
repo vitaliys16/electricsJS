@@ -8,6 +8,7 @@ import sendForm from './modules/sendForm';
 import faq from './modules/faq';
 import slider from './modules/slider';
 import sliderCarousel from './modules/sliderCarousel';
+import smoothScroll from './modules/smoothScroll';
 
 scrollUp();
 modal();
@@ -23,3 +24,4 @@ sendForm({
 faq();
 slider();
 sliderCarousel();
+smoothScroll();
