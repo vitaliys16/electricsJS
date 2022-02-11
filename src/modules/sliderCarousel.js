@@ -19,18 +19,25 @@ const sliderCarousel = () => {
 
     const windowDevice = () => {
         if (window.innerWidth > 850) {
+            left = 0;
             widthSlider = 200;
+            sizeSlide = 33.33333333;
             sizeConteiner = -100;
+            sliderCarousel.style.left = left + '%';
             sliderCarousel.style.width = widthSlider + '%';
         } else if (window.innerWidth < 850 && window.innerWidth > 570) {
+            left = 0;
             widthSlider = 300;
             sizeSlide = 50;
-            sizeConteiner = -250;
+            sizeConteiner = -200;
+            sliderCarousel.style.left = left + '%';
             sliderCarousel.style.width = widthSlider + '%';
         } else if (window.innerWidth < 570) {
+            left = 0;
             widthSlider = 600; 
             sizeSlide = 100;
             sizeConteiner = -500;
+            sliderCarousel.style.left = left + '%';
             sliderCarousel.style.width = widthSlider + '%';
         }
     };
@@ -45,7 +52,9 @@ const sliderCarousel = () => {
 
     const clickRight = () => {
         if (left < sizeConteiner + 1) {
-            return;
+            left = 0;
+            sliderCarousel.style.left = left + '%'; 
+            return;   
         }
         left = left - sizeSlide; 
         sliderCarousel.style.left = left + '%';
