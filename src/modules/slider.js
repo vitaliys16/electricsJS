@@ -40,12 +40,15 @@ const slider = () => {
                     elems[index].style.opacity = opacitySlide;
                 }
                 if (elems[index].style.opacity == 0 || elems[index].style.opacity < 0) {
+                    console.log('Я удалил ИНТЕРВАЛ slideOpacityInterval');
                     clearInterval(slideOpacityInterval);
                 }
-                clearTimeout(timeoutSlide);
-            }, 30);    
+                
+            }, 30); 
+            console.log('Я удалил ТАЙМЕР timeoutSlide');
+            clearTimeout(timeoutSlide);   
         }, timeInterval - 1000);
-        
+
     };
 
     const autoSlide = () => {
