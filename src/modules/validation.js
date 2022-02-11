@@ -1,8 +1,12 @@
+import  {maskPhone} from './helpers';
+
 const validation = () => {
     const statusBlock = document.createElement('div');
 
     const userName = document.querySelectorAll('.form-control')[0];
     const userPhone = document.querySelectorAll('.form-control.tel.required')[0];
+
+    maskPhone('.form-control.tel.required', '+7 (___) ___-__-__');
 
     let validCyrillic = function (e) {
         e.target.value = e.target.value.replace(/[^а-яА-ЯёЁ\s\-]/,"");
@@ -22,6 +26,7 @@ const validation = () => {
     let validPhone = function(e) {
         e.target.value = e.target.value.replace(/[^0-9+]/, "");   
     };
+    
 
     userName.addEventListener('input', validCyrillic);
     userPhone.addEventListener('input', validPhone);
