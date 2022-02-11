@@ -23,7 +23,7 @@ const slider = () => {
         elems[index].style.opacity = 0;
         slidesContent[index].style.opacity = 0;
                 animate({
-                    duration: 1000,
+                    duration: 500,
                     timing(timeFraction) {
                         return timeFraction;
                     },
@@ -32,6 +32,20 @@ const slider = () => {
                         elems[index].style.opacity = progress;
                     }
                 });
+
+        let timeoutSlide = setTimeout(()=> {
+            let slideOpacityInterval = setInterval(() => { 
+                if (elems[index].style.opacity) {
+                    let opacitySlide = elems[index].style.opacity - 0.05;
+                    elems[index].style.opacity = opacitySlide;
+                }
+                if (elems[index].style.opacity == 0 || elems[index].style.opacity < 0) {
+                    clearInterval(slideOpacityInterval);
+                }
+                clearTimeout(timeoutSlide);
+            }, 30);    
+        }, timeInterval - 1000);
+        
     };
 
     const autoSlide = () => {
